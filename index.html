@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Chart.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stock Price Tracker</h1>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" id="stock-symbol" placeholder="Enter stock symbol (e.g., AAPL)">
+            <select id="time-range">
+                <option value="1d">1 Day</option>
+                <option value="5d">5 Days</option>
+                <option value="1mo">1 Month</option>
+                <option value="3mo">3 Months</option>
+                <option value="6mo">6 Months</option>
+                <option value="1y" selected>1 Year</option>
+                <option value="5y">5 Years</option>
+            </select>
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <div class="stock-info" id="stock-info">
+            <!-- Stock information will appear here -->
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="stock-chart"></canvas>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+        </div>
+        
+        <div class="error" id="error">
+            <!-- Error messages will appear here -->
+        </div>
+    </div>
+    
+    <script src="js/api.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
